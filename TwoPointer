@@ -12,9 +12,11 @@ public class TwoPointer{
            {
                return false;
            }
-       }
+
        start++;
        end --;
+       }
+      
        
         // Replace this placeholder return statement with your code
         return true;
