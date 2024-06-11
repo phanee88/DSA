@@ -1,8 +1,9 @@
 import java.util.*;
 
-public class TwoPointer{
+public class Palindrome{
     public static boolean isPalindrome(String s) {
 
+	//Use one pointer at the begining and another one at the end
         int start=0;
         int end =s.length()-1;
 
