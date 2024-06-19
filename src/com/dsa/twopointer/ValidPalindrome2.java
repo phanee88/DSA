@@ -20,8 +20,9 @@ public class ValidPalindrome2 {
 				end--;
 
 			} else {
-				//If not matching, advance the left pointer which means we are skipping the left char and check
-				//if first statement returns false second call in advancing the right pointer backwards and compare
+				// If not matching, advance the left pointer which means we are skipping the
+				// left chat statement returns false second call in advancing the right pointer
+				// backwards and compare
 				return isPalindrome(s, start++, end) || isPalindrome(s, start, end--);
 
 			}
