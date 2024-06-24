@@ -12,16 +12,21 @@ public class HappyNumber {
 	public static boolean isHappyNumber(int n) {
 		int slow = n;
 		int fast = sumOfSquaredNumbers(n);
-		while (fast != 1 && fast != slow) {
+		while ( fast != slow) {
+			
+			if (fast == 1)
+				return true;
+			
 			//move slow pointer one time 
 			slow = sumOfSquaredNumbers(slow);
 			//move fast pointer two times
 			fast = sumOfSquaredNumbers(sumOfSquaredNumbers(fast));
+			
+			
 		}
 
-		if (fast == 1)
-			return true;
-		else
+		
+		
 			return false;
 	}
 
