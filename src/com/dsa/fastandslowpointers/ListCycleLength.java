@@ -1,6 +1,6 @@
 package com.dsa.fastandslowpointers;
 
-public class ListCycleDetector {
+public class ListCycleLength {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -17,11 +17,24 @@ public class ListCycleDetector {
 			fast = fast.next.next;
 
 			if (slow == fast)
-				return true;
+				cycleLength(slow);
 
 		}
 		return false;
 
+	}
+	
+	public static int cycleLength(ListNode slow)
+	{
+		ListNode current=slow;
+		int cycleLength=0;
+		do
+		{
+			current=current.next;
+			cycleLength++;
+		}while(current!=slow);
+			
+			return cycleLength;
 	}
 
 	public class ListNode {

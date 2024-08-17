@@ -36,6 +36,7 @@ public class PermutationInString {
 		if (matches(patternCount, windowCount))
 			return true;
 
+		System.out.println(windowCount);
 		// slide the window over the string starts from first char
 
 		for (int i = lenP; i < lenS; i++) {
